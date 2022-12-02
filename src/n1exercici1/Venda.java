@@ -15,6 +15,12 @@ public class Venda {
 		preuTotal = 0;
 		llistaProductes = new ArrayList<Producte>();
 	}
+	
+	//getters
+	
+	public ArrayList<Producte> getLlistaProductes (){
+		return llistaProductes;
+	}
 
 	// Mètodes
 

@@ -20,7 +20,9 @@ public class Producte {
 	return preu;
 	}
 	
-	
+	public String getNom() {
+		return nom;
+	}
 
 
 }
