@@ -30,24 +30,11 @@ public class App {
 			System.out.println("El preu de venda de tots els productes és de " + (venda1.calcularTotal()) + "€");
 		}catch (VendaBuidaException e) {
 			System.out.println(e.getErrorMessage());			
+		}catch (IndexOutOfBoundsException e) {
+			System.out.println("La llista no  té tantes posicions");
 		}
 		
-		//Anem a buscar posicio a la llista per generar error
-		
-		//aqui fuciona
-		try {
-			System.out.println("Hi ha un producte a la llista que es diu " + (venda1.getLlistaProductes().get(2).getNom()));
-		}catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Estas recorrent una llista amb masses posicions");
-		}
-		
-		
-		//aqui no fuciona
-		try {
-			System.out.println("Hi ha un producte a la llista que es diu " + (venda1.getLlistaProductes().get(0).getNom()));
-		}catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Estas recorrent una llista amb masses posicions");
-		}
+	
 		
 	
 	}

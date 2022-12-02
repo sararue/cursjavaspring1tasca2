@@ -33,7 +33,7 @@ public class Venda {
 		if (llistaProductes.size() <= 0) {
 			throw new VendaBuidaException();
 		} else {
-			for (int i = 0; i <= llistaProductes.length; i++) {
+			for (int i = 0; i <= llistaProductes.size(); i++) {
 				preuTotal += llistaProductes.get(i).getPreu();
 			}
 
