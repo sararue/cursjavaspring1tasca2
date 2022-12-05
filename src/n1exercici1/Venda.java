@@ -33,13 +33,22 @@ public class Venda {
 		if (llistaProductes.size() <= 0) {
 			throw new VendaBuidaException();
 		} else {
-			for (int i = 0; i <= llistaProductes.size(); i++) {
+			for (int i = 0; i < llistaProductes.size(); i++) {
 				preuTotal += llistaProductes.get(i).getPreu();
 			}
 
 			return preuTotal;
 		}
 	}
+	
+	//convertim ArrayList en Array
+	
+	public Object[] toArray (){
+		Object[] ArrayProductes = llistaProductes.toArray();	
+		return ArrayProductes;
+	}
+	
+	
 
 
 	// Mètodes de la classe

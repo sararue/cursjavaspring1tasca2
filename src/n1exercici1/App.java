@@ -30,11 +30,18 @@ public class App {
 			System.out.println("El preu de venda de tots els productes és de " + (venda1.calcularTotal()) + "€");
 		}catch (VendaBuidaException e) {
 			System.out.println(e.getErrorMessage());			
-		}catch (IndexOutOfBoundsException e) {
+		}
+		
+		//Anem a buscar error ArrayIndexOutOfBoundsException
+		
+		Object[] arrayProductes = venda1.getLlistaProductes().toArray();
+		try {
+		System.out.println(arrayProductes[3]);
+		}catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("La llista no  té tantes posicions");
 		}
 		
-	
+		
 		
 	
 	}
